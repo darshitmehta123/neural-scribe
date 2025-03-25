@@ -6,8 +6,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 # Initialize Firebase Admin SDK
 if not firebase_admin._apps:  # Check if Firebase is already initialized
-    firebase_credentials = st.secrets["FIREBASE_CREDENTIALS"]
-    cred = credentials.Certificate(json.loads(firebase_credentials))
+    firebase_credentials = st.secrets["FIREBASE_CREDENTIALS"]  # Already a dictionary
+    cred = credentials.Certificate(firebase_credentials)
     firebase_admin.initialize_app(cred)
 
 # Firestore client
