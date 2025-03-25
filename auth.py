@@ -1,3 +1,4 @@
+import json
 import streamlit as st
 import firebase_admin
 from firebase_admin import credentials, firestore, auth
@@ -5,7 +6,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 # Initialize Firebase Admin SDK
 if not firebase_admin._apps:  # Check if Firebase is already initialized
-    cred = credentials.Certificate("C:\\Users\\darsh\\OneDrive\\Desktop\\Project_main\\firebase_credentials.json")
+    firebase_credentials = st.secrets["FIREBASE_CREDENTIALS"]
+    cred = credentials.Certificate(json.loads(firebase_credentials))
     firebase_admin.initialize_app(cred)
 
 # Firestore client
