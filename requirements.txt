@@ -1,0 +1,14 @@
+streamlit
+firebase-admin
+google-auth
+requests
+PyPDF2
+streamlit-extras
+streamlit
+requests
+PyPDF2
+firebase-admin
+llama-index
+chromadb
+InstructorEmbedding
+streamlit-extras
