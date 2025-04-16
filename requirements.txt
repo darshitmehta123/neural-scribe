@@ -1,0 +1,8 @@
+streamlit
+requests
+openai
+PyMuPDF
+firebase-admin
+google-cloud-vision
+pillow
+streamlit-extras
